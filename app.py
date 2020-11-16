@@ -13,5 +13,15 @@ def user(name):
     return f"Hello, {name}. How are you doing?"
 
 
+# @app.route('/admin')
+# def admin():
+#     return redirect(url_for('home'))
+
+
+@app.route('/admin')
+def admin():
+    return redirect(url_for('user', name="cory"))
+
+
 if __name__ == "__main__":
     app.run(debug=True)
