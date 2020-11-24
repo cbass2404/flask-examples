@@ -1,4 +1,6 @@
-{% extends 'base.html' %} {% block title}Home page{% endblock %} {% block
-content %}
-<h1>Test</h1>
-{% endblock %}
+{% extends 'base.html' %} {% block title %}Home Page{% endblock %} {% block
+content %} {% if session.username %} Logged in as: {{session.username}} {% else
+%}
+<h1>Welcome to the page</h1>
+<a href="/login">Login Here</a>
+{% endif %} {% endblock %}
